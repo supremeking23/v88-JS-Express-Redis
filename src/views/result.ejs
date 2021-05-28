@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+		<!-- Compiled and minified CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				var selectElements = document.querySelectorAll("select");
+				M.FormSelect.init(selectElements);
+			});
+		</script>
+
+		<style>
+			.mt-2 {
+				margin-top: 2rem;
+			}
+			.p-2 {
+				padding: 2rem !important;
+			}
+			p {
+				/* display: flex;
+				justify-content: center; */
+				font-size: 1.3rem;
+			}
+			p .key {
+				font-weight: bold;
+			}
+			.information {
+				margin: 0 auto;
+				width: 600px;
+				/* background: red; */
+				padding: 10px;
+			}
+		</style>
+
+		<title>Survey Form</title>
+	</head>
+	<body>
+		<nav class="light-blue darken-4">
+			<div class="container">
+				<div class="nav-wrapper">
+					<a href="#" class="brand-logo">Survey Form</a>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container mt-2">
+			<div class="row card">
+				<div class="row">
+					<div class="col s12">
+						<h4>Submitted Information</h4>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="information">
+						<p><span class="key">Name:</span> <span class="value"> <%= user.name %> </span></p>
+
+						<p><span class="key">Dojo Location:</span> <span class="value"> <%= user.dojo_location %> </span></p>
+						<p><span class="key">Favorite Language:</span> <span class="value"> <%= user.programming_language %> </span></p>
+						<p><span class="key">Comment:</span> <span class="value"> <%= user.comment %> </span></p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col s12">
+						<a href="/" class="waves-effect waves-light btn light-blue darken-4"><i class="material-icons left">arrow_back</i>button</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Option 2: Separate Popper and Bootstrap JS -->
+		<!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    --></body>
+</html>
